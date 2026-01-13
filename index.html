@@ -56,6 +56,13 @@
             font-size: 1.2rem;
         }
 
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
         .logo-text h1 {
             font-size: 1.3rem;
             color: #111;
@@ -134,6 +141,13 @@
             align-items: center;
             justify-content: center;
             color: #64748b;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* About Section */
@@ -159,6 +173,13 @@
             align-items: center;
             justify-content: center;
             color: #64748b;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .about-content h2 {
@@ -291,6 +312,13 @@
             align-items: center;
             justify-content: center;
             color: #64748b;
+            overflow: hidden;
+        }
+
+        .fleet-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .fleet-info {
@@ -349,240 +377,4 @@
             align-items: center;
         }
 
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: #1e3a8a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .contact-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item p {
-            color: #d1d5db;
-        }
-
-        .contact-item .small {
-            font-size: 0.9rem;
-            color: #9ca3af;
-            margin-top: 0.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        footer p {
-            color: #9ca3af;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero-container,
-            .about-container {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-content h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-img">KTB</div>
-                <div class="logo-text">
-                    <h1>Kaipara Tow Boats</h1>
-                    <p>Est. 1988</p>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#fleet">Fleet</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h2>Safe & Reliable Towage Services</h2>
-                <p>Celebrating over 35 years of excellence in harbour towage and workboat services throughout the Auckland area.</p>
-                <a href="#contact" class="btn">Get In Touch</a>
-            </div>
-            <div class="hero-image">
-                <p>Hero Image<br>Replace with your tug boat image</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="about-image">
-                <p>About Image<br>Replace with company/fleet image</p>
-            </div>
-            <div class="about-content">
-                <h2>About Kaipara Tow Boats</h2>
-                <p>Kaipara Tow Boats is a family-owned business established in 1988, providing harbour towage and workboat services within the Auckland area.</p>
-                <p>The company has expanded its fleet of tugs and barges with increasing demand, as well as the area of operations. Since its formation, the company has established a reputation as a reliable, safe quality towage operator.</p>
-                <p>With a good track record and high levels of skill, coupled with an honest can-do attitude, Kaipara Tow Boats maintains its fleet of vessels to a high standard, available 24/7.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="services-container">
-            <h2>Our Services</h2>
-            <p class="services-intro">Comprehensive maritime solutions tailored to meet your operational needs</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚓</div>
-                    <h3>Harbour Towage</h3>
-                    <p>Professional towing services for vessels of all sizes within Auckland harbour and surrounding waters.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚢</div>
-                    <h3>Barge Services</h3>
-                    <p>Reliable barge transportation and positioning for marine construction and cargo operations.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🕐</div>
-                    <h3>24/7 Availability</h3>
-                    <p>Round-the-clock service ensuring your maritime operations never stop, emergency response available.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏗️</div>
-                    <h3>Marine Construction Support</h3>
-                    <p>Specialized support for marine construction projects with experienced crew and well-maintained equipment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fleet Section -->
-    <section id="fleet" class="fleet">
-        <div class="fleet-container">
-            <h2>Our Fleet</h2>
-            <p class="fleet-intro">Well-maintained vessels ready to serve your needs</p>
-            <div class="fleet-grid">
-                <div class="fleet-card">
-                    <div class="fleet-image">Fleet Image 1</div>
-                    <div class="fleet-info">
-                        <h3>Vessel Name</h3>
-                        <p>Specifications and capabilities of this vessel.</p>
-                        <ul class="fleet-specs">
-                            <li>• Length: XX meters</li>
-                            <li>• Power: XX HP</li>
-                            <li>• Capacity: XX tonnes</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="fleet-card">
-                    <div class="fleet-image">Fleet Image 2</div>
-                    <div class="fleet-info">
-                        <h3>Vessel Name</h3>
-                        <p>Specifications and capabilities of this vessel.</p>
-                        <ul class="fleet-specs">
-                            <li>• Length: XX meters</li>
-                            <li>• Power: XX HP</li>
-                            <li>• Capacity: XX tonnes</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="fleet-card">
-                    <div class="fleet-image">Fleet Image 3</div>
-                    <div class="fleet-info">
-                        <h3>Vessel Name</h3>
-                        <p>Specifications and capabilities of this vessel.</p>
-                        <ul class="fleet-specs">
-                            <li>• Length: XX meters</li>
-                            <li>• Power: XX HP</li>
-                            <li>• Capacity: XX tonnes</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone</h3>
-                    <p>+64 9 XXX XXXX</p>
-                    <p class="small">Available 24/7</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <p>info@kaiparatowboats.co.nz</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>Auckland, New Zealand</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Kaipara Tow Boats. Est. 1988. All rights reserved.</p>
-    </footer>
-    <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</body>
-</html>
+        .contact
