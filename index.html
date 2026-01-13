@@ -377,4 +377,267 @@
             align-items: center;
         }
 
-        .contact
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #d1d5db;
+        }
+
+        .contact-item .small {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #9ca3af;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-container,
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-img" id="logoContainer">KTB</div>
+                <div class="logo-text">
+                    <h1 id="companyName">Kaipara Tow Boats</h1>
+                    <p id="tagline">Est. 1988</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Fleet</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2 id="heroHeading">Safe & Reliable Towage Services</h2>
+                <p id="heroDescription">Celebrating over 35 years of excellence in harbour towage and workboat services throughout the Auckland area.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="hero-image" id="heroImageContainer">
+                <p>Hero Image<br>Replace with your tug boat image</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image" id="aboutImageContainer">
+                <p>About Image<br>Replace with company/fleet image</p>
+            </div>
+            <div class="about-content">
+                <h2 id="aboutHeading">About Kaipara Tow Boats</h2>
+                <p id="aboutParagraph1">Kaipara Tow Boats is a family-owned business established in 1988, providing harbour towage and workboat services within the Auckland area.</p>
+                <p id="aboutParagraph2">The company has expanded its fleet of tugs and barges with increasing demand, as well as the area of operations. Since its formation, the company has established a reputation as a reliable, safe quality towage operator.</p>
+                <p id="aboutParagraph3">With a good track record and high levels of skill, coupled with an honest can-do attitude, Kaipara Tow Boats maintains its fleet of vessels to a high standard, available 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <p class="services-intro">Comprehensive maritime solutions tailored to meet your operational needs</p>
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services loaded from CMS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet">
+        <div class="fleet-container">
+            <h2>Our Fleet</h2>
+            <p class="fleet-intro">Well-maintained vessels ready to serve your needs</p>
+            <div class="fleet-grid" id="fleetGrid">
+                <!-- Fleet loaded from CMS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p id="contactPhone">+64 9 XXX XXXX</p>
+                    <p class="small">Available 24/7</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p id="contactEmail">info@kaiparatowboats.co.nz</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p id="contactLocation">Auckland, New Zealand</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 <span id="footerCompanyName">Kaipara Tow Boats</span>. Est. 1988. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load content from CMS
+        fetch('/content.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update company name and tagline
+                document.getElementById('companyName').textContent = data.company_name;
+                document.getElementById('tagline').textContent = data.tagline;
+                document.getElementById('footerCompanyName').textContent = data.company_name;
+
+                // Update logo
+                if (data.logo) {
+                    document.getElementById('logoContainer').innerHTML = `<img src="${data.logo}" alt="${data.company_name} Logo">`;
+                }
+
+                // Update hero section
+                document.getElementById('heroHeading').textContent = data.hero.heading;
+                document.getElementById('heroDescription').textContent = data.hero.description;
+                if (data.hero.image) {
+                    document.getElementById('heroImageContainer').innerHTML = `<img src="${data.hero.image}" alt="Hero Image">`;
+                }
+
+                // Update about section
+                document.getElementById('aboutHeading').textContent = data.about.heading;
+                document.getElementById('aboutParagraph1').textContent = data.about.paragraph1;
+                document.getElementById('aboutParagraph2').textContent = data.about.paragraph2;
+                document.getElementById('aboutParagraph3').textContent = data.about.paragraph3;
+                if (data.about.image) {
+                    document.getElementById('aboutImageContainer').innerHTML = `<img src="${data.about.image}" alt="About Image">`;
+                }
+
+                // Update services
+                const servicesGrid = document.getElementById('servicesGrid');
+                servicesGrid.innerHTML = '';
+                data.services.forEach(service => {
+                    const serviceCard = `
+                        <div class="service-card">
+                            <div class="service-icon">${service.icon}</div>
+                            <h3>${service.name}</h3>
+                            <p>${service.description}</p>
+                        </div>
+                    `;
+                    servicesGrid.innerHTML += serviceCard;
+                });
+
+                // Update fleet
+                const fleetGrid = document.getElementById('fleetGrid');
+                fleetGrid.innerHTML = '';
+                data.fleet.forEach(vessel => {
+                    const imageHTML = vessel.image 
+                        ? `<img src="${vessel.image}" alt="${vessel.name}">`
+                        : `<p>Fleet Image</p>`;
+                    
+                    const fleetCard = `
+                        <div class="fleet-card">
+                            <div class="fleet-image">${imageHTML}</div>
+                            <div class="fleet-info">
+                                <h3>${vessel.name}</h3>
+                                <p>${vessel.description}</p>
+                                <ul class="fleet-specs">
+                                    <li>• Length: ${vessel.length}</li>
+                                    <li>• Power: ${vessel.power}</li>
+                                    <li>• Capacity: ${vessel.capacity}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    `;
+                    fleetGrid.innerHTML += fleetCard;
+                });
+
+                // Update contact
+                document.getElementById('contactPhone').textContent = data.contact.phone;
+                document.getElementById('contactEmail').textContent = data.contact.email;
+                document.getElementById('contactLocation').textContent = data.contact.location;
+            })
+            .catch(error => {
+                console.error('Error loading content:', error);
+            });
+    </script>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
