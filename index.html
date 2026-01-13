@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaipara Tow Boats - Auckland Harbour Towage Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            background: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            color: #111;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            margin-top: 80px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #dbeafe;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #1e3a8a;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #f0f9ff;
+        }
+
+        .hero-image {
+            background: #cbd5e1;
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: #cbd5e1;
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #111;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 2rem;
+            background: #f9fafb;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #111;
+        }
+
+        .services-intro {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #dbeafe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+        }
+
+        .service-card p {
+            color: #6b7280;
+        }
+
+        /* Fleet Section */
+        .fleet {
+            padding: 80px 2rem;
+            background: white;
+        }
+
+        .fleet-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fleet h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #111;
+        }
+
+        .fleet-intro {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .fleet-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .fleet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .fleet-image {
+            background: #cbd5e1;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+        }
+
+        .fleet-info {
+            padding: 1.5rem;
+        }
+
+        .fleet-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .fleet-info p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .fleet-specs {
+            list-style: none;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .fleet-specs li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 2rem;
+            background: #111827;
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #d1d5db;
+        }
+
+        .contact-item .small {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #9ca3af;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-container,
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-img">KTB</div>
+                <div class="logo-text">
+                    <h1>Kaipara Tow Boats</h1>
+                    <p>Est. 1988</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#fleet">Fleet</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Safe & Reliable Towage Services</h2>
+                <p>Celebrating over 35 years of excellence in harbour towage and workboat services throughout the Auckland area.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <p>Hero Image<br>Replace with your tug boat image</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <p>About Image<br>Replace with company/fleet image</p>
+            </div>
+            <div class="about-content">
+                <h2>About Kaipara Tow Boats</h2>
+                <p>Kaipara Tow Boats is a family-owned business established in 1988, providing harbour towage and workboat services within the Auckland area.</p>
+                <p>The company has expanded its fleet of tugs and barges with increasing demand, as well as the area of operations. Since its formation, the company has established a reputation as a reliable, safe quality towage operator.</p>
+                <p>With a good track record and high levels of skill, coupled with an honest can-do attitude, Kaipara Tow Boats maintains its fleet of vessels to a high standard, available 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <p class="services-intro">Comprehensive maritime solutions tailored to meet your operational needs</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚓</div>
+                    <h3>Harbour Towage</h3>
+                    <p>Professional towing services for vessels of all sizes within Auckland harbour and surrounding waters.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚢</div>
+                    <h3>Barge Services</h3>
+                    <p>Reliable barge transportation and positioning for marine construction and cargo operations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🕐</div>
+                    <h3>24/7 Availability</h3>
+                    <p>Round-the-clock service ensuring your maritime operations never stop, emergency response available.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Marine Construction Support</h3>
+                    <p>Specialized support for marine construction projects with experienced crew and well-maintained equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet">
+        <div class="fleet-container">
+            <h2>Our Fleet</h2>
+            <p class="fleet-intro">Well-maintained vessels ready to serve your needs</p>
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <div class="fleet-image">Fleet Image 1</div>
+                    <div class="fleet-info">
+                        <h3>Vessel Name</h3>
+                        <p>Specifications and capabilities of this vessel.</p>
+                        <ul class="fleet-specs">
+                            <li>• Length: XX meters</li>
+                            <li>• Power: XX HP</li>
+                            <li>• Capacity: XX tonnes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-image">Fleet Image 2</div>
+                    <div class="fleet-info">
+                        <h3>Vessel Name</h3>
+                        <p>Specifications and capabilities of this vessel.</p>
+                        <ul class="fleet-specs">
+                            <li>• Length: XX meters</li>
+                            <li>• Power: XX HP</li>
+                            <li>• Capacity: XX tonnes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-image">Fleet Image 3</div>
+                    <div class="fleet-info">
+                        <h3>Vessel Name</h3>
+                        <p>Specifications and capabilities of this vessel.</p>
+                        <ul class="fleet-specs">
+                            <li>• Length: XX meters</li>
+                            <li>• Power: XX HP</li>
+                            <li>• Capacity: XX tonnes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>+64 9 XXX XXXX</p>
+                    <p class="small">Available 24/7</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>info@kaiparatowboats.co.nz</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Auckland, New Zealand</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Kaipara Tow Boats. Est. 1988. All rights reserved.</p>
+    </footer>
+</body>
+</html>
