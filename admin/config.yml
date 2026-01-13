@@ -22,6 +22,11 @@ collections:
             name: "tagline"
             widget: "string"
             default: "Est. 1988"
+
+          - label: "Company Logo"
+            name: "logo"
+            widget: "image"
+            required: false
           
           - label: "Hero Section"
             name: "hero"
