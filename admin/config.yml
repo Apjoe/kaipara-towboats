@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Website Content"
+        name: "content"
+        file: "content.json"
+        fields:
+          - label: "Company Name"
+            name: "company_name"
+            widget: "string"
+            default: "Kaipara Tow Boats"
+          
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+            default: "Est. 1988"
+          
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Hero Image", name: "image", widget: "image", required: false}
+          
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Paragraph 1", name: "paragraph1", widget: "text"}
+              - {label: "Paragraph 2", name: "paragraph2", widget: "text"}
+              - {label: "Paragraph 3", name: "paragraph3", widget: "text"}
+              - {label: "About Image", name: "image", widget: "image", required: false}
+          
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Service Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon Emoji", name: "icon", widget: "string", hint: "Use an emoji like ⚓ 🚢 🕐"}
+          
+          - label: "Fleet"
+            name: "fleet"
+            widget: "list"
+            fields:
+              - {label: "Vessel Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Length", name: "length", widget: "string"}
+              - {label: "Power", name: "power", widget: "string"}
+              - {label: "Capacity", name: "capacity", widget: "string"}
+              - {label: "Vessel Image", name: "image", widget: "image", required: false}
+          
+          - label: "Contact Information"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
