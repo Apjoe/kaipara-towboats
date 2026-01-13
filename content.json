@@ -1,0 +1,69 @@
+{
+  "company_name": "Kaipara Tow Boats",
+  "tagline": "Est. 1988",
+  "hero": {
+    "heading": "Safe & Reliable Towage Services",
+    "description": "Celebrating over 35 years of excellence in harbour towage and workboat services throughout the Auckland area.",
+    "image": ""
+  },
+  "about": {
+    "heading": "About Kaipara Tow Boats",
+    "paragraph1": "Kaipara Tow Boats is a family-owned business established in 1988, providing harbour towage and workboat services within the Auckland area.",
+    "paragraph2": "The company has expanded its fleet of tugs and barges with increasing demand, as well as the area of operations. Since its formation, the company has established a reputation as a reliable, safe quality towage operator.",
+    "paragraph3": "With a good track record and high levels of skill, coupled with an honest can-do attitude, Kaipara Tow Boats maintains its fleet of vessels to a high standard, available 24/7.",
+    "image": ""
+  },
+  "services": [
+    {
+      "name": "Harbour Towage",
+      "description": "Professional towing services for vessels of all sizes within Auckland harbour and surrounding waters.",
+      "icon": "⚓"
+    },
+    {
+      "name": "Barge Services",
+      "description": "Reliable barge transportation and positioning for marine construction and cargo operations.",
+      "icon": "🚢"
+    },
+    {
+      "name": "24/7 Availability",
+      "description": "Round-the-clock service ensuring your maritime operations never stop, emergency response available.",
+      "icon": "🕐"
+    },
+    {
+      "name": "Marine Construction Support",
+      "description": "Specialized support for marine construction projects with experienced crew and well-maintained equipment.",
+      "icon": "🏗️"
+    }
+  ],
+  "fleet": [
+    {
+      "name": "Vessel Name 1",
+      "description": "Specifications and capabilities of this vessel.",
+      "length": "XX meters",
+      "power": "XX HP",
+      "capacity": "XX tonnes",
+      "image": ""
+    },
+    {
+      "name": "Vessel Name 2",
+      "description": "Specifications and capabilities of this vessel.",
+      "length": "XX meters",
+      "power": "XX HP",
+      "capacity": "XX tonnes",
+      "image": ""
+    },
+    {
+      "name": "Vessel Name 3",
+      "description": "Specifications and capabilities of this vessel.",
+      "length": "XX meters",
+      "power": "XX HP",
+      "capacity": "XX tonnes",
+      "image": ""
+    }
+  ],
+  "contact": {
+    "phone": "+64 9 XXX XXXX",
+    "email": "info@kaiparatowboats.co.nz",
+    "location": "Auckland, New Zealand"
+  }
+}
