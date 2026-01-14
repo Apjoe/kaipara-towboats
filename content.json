@@ -38,7 +38,7 @@
   ],
   "fleet": [
     {
-      "name": "Vessel Name 1",
+      "name": "Tug 1 ",
       "description": "Specifications and capabilities of this vessel.",
       "length": "XX meters",
       "power": "XX HP",
@@ -46,20 +46,28 @@
       "image": ""
     },
     {
-      "name": "Vessel Name 2",
-      "description": "Specifications and capabilities of this vessel.",
-      "length": "XX meters",
-      "power": "XX HP",
-      "capacity": "XX tonnes",
-      "image": "/images/uploads/img_0982.jpg"
-    },
-    {
-      "name": "Vessel Name 3",
+      "name": "Tug 2",
       "description": "Specifications and capabilities of this vessel.",
       "length": "XX meters",
       "power": "XX HP",
       "capacity": "XX tonnes",
       "image": ""
+    },
+    {
+      "name": "Tug 3",
+      "description": "Specifications and capabilities of this vessel.",
+      "length": "XX meters",
+      "power": "XX HP",
+      "capacity": "XX tonnes",
+      "image": ""
+    },
+    {
+      "name": "Barge",
+      "image": "/images/uploads/img_0982.jpg",
+      "description": "Barge ship",
+      "length": "Dont know",
+      "power": "Dont know",
+      "capacity": "Dont know"
     }
   ],
   "contact": {
