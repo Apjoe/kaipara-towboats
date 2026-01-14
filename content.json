@@ -38,23 +38,23 @@
   ],
   "fleet": [
     {
-      "name": "Tug 1 ",
-      "description": "Specifications and capabilities of this vessel.",
-      "length": "XX meters",
-      "power": "XX HP",
-      "capacity": "XX tonnes",
+      "name": "Herenui",
+      "description": "Specifications and capabilities of this vessel.\n- Coastal Tug \n- Operating Area = Coastal restricted \n- Draft (Depth): 2.4M\n- Beam (Width): 6M\n- Home Port: Whangarei \n- Built in 1972 \n- Main engine: 2 X 12V71GM\n- Has a towing winch = hydraulic \n- Fuel Capacity: 16000L \n- Hourly Consumption: 120L\n",
+      "length": "16.8 Meters",
+      "power": "680 HP",
+      "capacity": "8 tonne bollard pull",
       "image": ""
     },
     {
-      "name": "Tug 2",
-      "description": "Specifications and capabilities of this vessel.",
-      "length": "XX meters",
-      "power": "XX HP",
-      "capacity": "XX tonnes",
+      "name": "Wainui",
+      "description": "Specifications and capabilities of this vessel.\n- Coastal Tug \n- Operating Area = Coastal restricted \n- Draft (Depth): 2.29 M\n- Beam (Width): 5.79 M\n- Home Port: Whangarei \n- Built in 1960\n- Main engine: 2 X Gardner 8L3B\n- Has a towing winch = hydraulic \n- Fuel Capacity: 8000L\n- Hourly Consumption: 60L",
+      "length": "16.8 Meters",
+      "power": "440 HP",
+      "capacity": "7 tonne bollard pull",
       "image": ""
     },
     {
-      "name": "Tug 3",
+      "name": "Mana",
       "description": "Specifications and capabilities of this vessel.",
       "length": "XX meters",
       "power": "XX HP",
@@ -71,8 +71,8 @@
     }
   ],
   "contact": {
-    "phone": "+64 9 XXX XXXX",
-    "email": "info@kaiparatowboats.co.nz",
-    "location": "Auckland, New Zealand"
+    "phone": "+64 XXXX XXXX",
+    "email": "kaiparatowboats@gmail.com",
+    "location": "Whangārei, New Zealand"
   }
 }
