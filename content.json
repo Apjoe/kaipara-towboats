@@ -73,10 +73,11 @@
   "contact": {
     "phones": [
       {
-        "name": "Ricky",
-        "number": "021585725"
+        "name": "Office",
+        "number": "+64 XXXX XXXX"
       }
     ],
-    "email": "info@kaiparatowboats.co.nz",
-    "location": "Auckland, New Zealand"
+    "email": "kaiparatowboats@gmail.com",
+    "location": "Whangārei, New Zealand"
   }
+}
