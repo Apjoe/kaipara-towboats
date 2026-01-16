@@ -71,8 +71,20 @@
     }
   ],
   "contact": {
-    "phone": "+64 XXXX XXXX",
-    "email": "kaiparatowboats@gmail.com",
-    "location": "Whangārei, New Zealand"
+    "phones": [
+      {
+        "name": "Office",
+        "number": "+64 9 XXX XXXX"
+      },
+      {
+        "name": "Operations Manager",
+        "number": "+64 9 XXX XXXX"
+      },
+      {
+        "name": "After Hours",
+        "number": "+64 9 XXX XXXX"
+      }
+    ],
+    "email": "info@kaiparatowboats.co.nz",
+    "location": "Auckland, New Zealand"
   }
-}
