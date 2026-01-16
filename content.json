@@ -73,8 +73,16 @@
   "contact": {
     "phones": [
       {
-        "name": "Office",
-        "number": "+64 XXXX XXXX"
+        "name": "Mike Thomson ",
+        "number": "+64 027-4975-862"
+      },
+      {
+        "name": "Roy Thomson ",
+        "number": "+64 021-090-19072"
+      },
+      {
+        "name": "Wade Gatfield",
+        "number": "+64 021-269-1305"
       }
     ],
     "email": "kaiparatowboats@gmail.com",
