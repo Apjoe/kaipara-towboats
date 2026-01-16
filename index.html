@@ -522,13 +522,9 @@
     <section id="contact" class="contact">
         <div class="contact-container">
             <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone</h3>
-                    <p id="contactPhone">+64 9 XXX XXXX</p>
-                    <p class="small">Available 24/7</p>
-                </div>
+            <div class="contact-grid" id="contactGrid">
+                <!-- Contact info loaded from CMS -->
+            </div>
                 <div class="contact-item">
                     <div class="contact-icon">✉️</div>
                     <h3>Email</h3>
@@ -619,9 +615,37 @@
                 });
 
                 // Update contact
-                document.getElementById('contactPhone').textContent = data.contact.phone;
-                document.getElementById('contactEmail').textContent = data.contact.email;
-                document.getElementById('contactLocation').textContent = data.contact.location;
+                const contactGrid = document.getElementById('contactGrid');
+                contactGrid.innerHTML = '';
+                
+                // Add phone contacts
+                data.contact.phones.forEach(phone => {
+                    contactGrid.innerHTML += `
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <h3>${phone.name}</h3>
+                            <p>${phone.number}</p>
+                        </div>
+                    `;
+                });
+                
+                // Add email
+                contactGrid.innerHTML += `
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>${data.contact.email}</p>
+                    </div>
+                `;
+                
+                // Add location
+                contactGrid.innerHTML += `
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>${data.contact.location}</p>
+                    </div>
+                `;
             })
             .catch(error => {
                 console.error('Error loading content:', error);
