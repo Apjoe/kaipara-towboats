@@ -73,6 +73,12 @@
   "contact": {
     "phone": "+64 XXXX XXXX",
     "email": "kaiparatowboats@gmail.com",
-    "location": "Whangārei, New Zealand"
+    "location": "Whangārei, New Zealand",
+    "phones": [
+      {
+        "name": "Ricky",
+        "number": "021585725"
+      }
+    ]
   }
 }
