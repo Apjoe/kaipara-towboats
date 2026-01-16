@@ -17,12 +17,12 @@
   "services": [
     {
       "name": "Harbour Towage",
-      "description": "Professional towing services for vessels of all sizes within Auckland harbour and surrounding waters.",
+      "description": "Professional towing services for vessels of all sizes within the Whangārei area and surrounding waters.",
       "icon": "⚓"
     },
     {
       "name": "Barge Services",
-      "description": "Reliable barge transportation and positioning for marine construction and cargo operations.",
+      "description": "Barge-based access and positioning for bridge works, marine construction, maintenance, and specialised operations.",
       "icon": "🚢"
     },
     {
