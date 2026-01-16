@@ -23,7 +23,7 @@
     {
       "name": "Barge Services",
       "description": "Barge-based access and positioning for bridge works, marine construction, maintenance, and specialised operations.",
-      "icon": "🚢"
+      "icon": "🏗️"
     },
     {
       "name": "24/7 Availability",
@@ -31,9 +31,9 @@
       "icon": "🕐"
     },
     {
-      "name": "Marine Construction Support",
-      "description": "Specialized support for marine construction projects with experienced crew and well-maintained equipment.",
-      "icon": "🏗️"
+      "name": "Marine Support Service ",
+      "description": "Comprehensive tug and marine support services, including harbour towage, vessel escorting, project cargo movements, deadship towage, ship berthing, coastal towage, dredging support, lines boats duties, crew, diver and pilot transfers, salvaging, and general port and coastal marine services.",
+      "icon": "🚢"
     }
   ],
   "fleet": [
